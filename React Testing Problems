@@ -1,0 +1,26 @@
+Problem 1: 
+
+Cannot find module '@testing-library/jest-dom' from 'src/setupTests.js'
+    3| //expect(element).toHaveTextContent(/react/)
+    4| // learn more: https://github.com/testing-library/jest.dom
+    5| import '@testing-library/jest-dom';
+...
+
+
+Solution: 
+-install by cmd - npm install --save-dev @testing-library/jest-dom
+-Go to setupTests.js file and write a code: 
+
+       import '@testing-library/jest-dom'
+
+       setupFilesAfterEnv: ['<rootDir>/jest-setup.js']
+
+
+Problem 2: 
+
+ Cannot find module '@testing-library/react' from 'src/App.test.js'
+ 1| import { render, screen } from '@testing-library/react'
+ 2| import App from './App';
+
+Solution: 
+- install by cmd - npm install --save-dev @testing-library/react
